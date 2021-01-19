@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:oracle:thin:@10.223.58.246:11521/pms2hn
+    username: GYDL
+    password: GYDL-.pms2
+    driver-class-name: oracle.jdbc.OracleDriver

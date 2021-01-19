@@ -1,5 +1,17 @@
-# Compiled class file
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# Compiled
 *.class
+target/
+build/
 
 # Log file
 *.log

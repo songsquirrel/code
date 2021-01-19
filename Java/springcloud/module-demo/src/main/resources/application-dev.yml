@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:oracle:thin:@172.31.103.203:1521/orcl
+    username: scyw
+    password: hn..123456
+    driver-class-name: oracle.jdbc.OracleDriver

@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: @profileActiveTag@
+  application:
+    name: hnxt-sync-pms
+server:
+  port: 17888
+# logback
+logging:
+  config: classpath:config/logback.xml
+# mybatis plus
+mybatis-plus:
+  config-location: classpath:config/mybatis.xml
+  mapper-locations: classpath:mapper/*.xml
