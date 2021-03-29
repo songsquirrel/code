@@ -1,0 +1,9 @@
+server:
+  port: 18777
+code:
+  generator:
+    output:
+      path:
+#    template:
+#      path:
+#    charset:

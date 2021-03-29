@@ -56,7 +56,8 @@ public class CommonTools {
 
     /**
      * 持久化文件--小文件
-     * @param path 路径
+     *
+     * @param path    路径
      * @param content 内容
      */
     public static void writeSmallFile(Path path, String content) {
@@ -68,7 +69,7 @@ public class CommonTools {
         } catch (IOException e) {
             log.error("文件写入失败!");
         } finally {
-            if (writer != null){
+            if (writer != null) {
                 try {
                     writer.close();
                 } catch (IOException e) {
@@ -80,12 +81,13 @@ public class CommonTools {
 
     /**
      * 小文件读取(编码UTF-8)
+     *
      * @param path 文件路径
      * @return 文件内容
      */
     public static StringBuilder readSmallFile(Path path) {
         log.info(String.format("-------CommonTool readSmallFile path is: %s", path.toString()));
-        if (!Files.exists(path)){
+        if (!Files.exists(path)) {
             log.info("-----文件不存在!----");
             return new StringBuilder();
         }
@@ -94,17 +96,17 @@ public class CommonTools {
         try {
             reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
             String str;
-            while ((str = reader.readLine()) != null){
+            while ((str = reader.readLine()) != null) {
                 returnBuilder.append(str);
             }
         } catch (IOException e) {
             log.error("文件读取失败! at CommonTools.java\n", e);
         } finally {
-            if (reader != null){
+            if (reader != null) {
                 try {
                     reader.close();
                 } catch (IOException e) {
-                   log.error("----------BufferedReader close failed! at CommonTools.java\n", e);
+                    log.error("----------BufferedReader close failed! at CommonTools.java\n", e);
                 }
             }
         }

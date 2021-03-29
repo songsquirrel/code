@@ -4,6 +4,11 @@
 .vscode/
 .settings/
 
+# Java
+.project
+.gitignore
+parent/
+
 # Maven
 .mvn/
 mvnw

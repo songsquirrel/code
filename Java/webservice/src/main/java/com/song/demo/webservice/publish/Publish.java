@@ -24,7 +24,7 @@ public class Publish {
     private WebServiceDao webServiceDao;
 
     @Bean
-    public Endpoint endpoint(){
+    public Endpoint endpoint() {
         Endpoint endpoint = new EndpointImpl(bus, webServiceDao);
         endpoint.publish("/testWebService");
         return endpoint;

@@ -6,7 +6,7 @@ package com.song.common.base.enums;
  * Date: 2020/9/28
  * Description: http status code
  */
-public enum  HttpStatus {
+public enum HttpStatus {
     /**
      * 状态码说明:
      * 200-299: 请求正常
@@ -24,8 +24,7 @@ public enum  HttpStatus {
     ERR_SYSTEM(501, "系统错误, 请联系管理员!");
 
 
-
-    HttpStatus(int status, String message){
+    HttpStatus(int status, String message) {
         this.status = status;
         this.message = message;
     }
@@ -33,10 +32,11 @@ public enum  HttpStatus {
     private final int status;
     private final String message;
 
-    public String getMessage(){
+    public String getMessage() {
         return message;
     }
-    public int getStatus(){
+
+    public int getStatus() {
         return status;
     }
 }

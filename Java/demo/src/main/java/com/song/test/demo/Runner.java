@@ -15,10 +15,11 @@ public class Runner implements CommandLineRunner {
 
     @Resource
     InitDao dao;
+
     @Override
     public void run(String... args) throws Exception {
         String fromDual = dao.getFromDual();
-        if ("123".equals(fromDual)){
+        if ("123".equals(fromDual)) {
             System.out.println("---------success!");
         }
     }

@@ -29,7 +29,7 @@ class WebserviceApplicationTests {
         Client client = dcf.createClient("http://127.0.0.1:17888/services/testWebService?wsdl");
         // 需要密码的情况需要加上用户名和密码
         // client.getOutInterceptors().add(new ClientLoginInterceptor(USER_NAME, PASS_WORD));
-        Object[] getValueFromWebServices = client.invoke("getValueFromWebService","test");
+        Object[] getValueFromWebServices = client.invoke("getValueFromWebService", "test");
         System.out.println(getValueFromWebServices[0]);
     }
 
