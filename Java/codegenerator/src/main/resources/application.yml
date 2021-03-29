@@ -7,3 +7,10 @@ code:
 #    template:
 #      path:
 #    charset:
+#spring:
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    url: jdbc:oracle:thin:@172.31.103.203:1521:orcl
+#    username: scyw
+#    password: scyw
+#    driver-class-name: oracle.jdbc.OracleDriver

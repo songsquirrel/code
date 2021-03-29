@@ -4,6 +4,7 @@ import freemarker.template.Configuration;
 import freemarker.template.TemplateExceptionHandler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,11 +19,12 @@ public class GeneratorConfig {
     @Value("${code.generator.output.path:./output/}")
     private String outputPath;
 
-    @Value("${code.generator.template.path:classpath:templates/}")
+    @Value("${code.generator.template.path:templates/}")
     private String templatePath;
 
     @Value("${code.generator.charset:UTF-8")
     private String charset;
+
 
     /**
      * 配置freemarker
@@ -30,10 +32,11 @@ public class GeneratorConfig {
      * @return configuration
      * @throws IOException
      */
-    @Bean
-    public Configuration injectTemplate() throws IOException {
+    @Bean(name = "freeMakerConfiguration")
+    @Scope(scopeName = "singleton")
+    public Configuration injectTemplate() {
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_29);
-        cfg.setDirectoryForTemplateLoading(new File(templatePath));
+        cfg.setClassForTemplateLoading(getClass(), templatePath);
         cfg.setDefaultEncoding(charset);
         // Sets how errors will appear.
         // During web page *development* TemplateExceptionHandler.HTML_DEBUG_HANDLER is better.
