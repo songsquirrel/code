@@ -19,10 +19,10 @@ public class GeneratorConfig {
     @Value("${code.generator.output.path:./output/}")
     private String outputPath;
 
-    @Value("${code.generator.template.path:templates/}")
+    @Value("${code.generator.template.path:/templates/}")
     private String templatePath;
 
-    @Value("${code.generator.charset:UTF-8")
+    @Value("${code.generator.charset:UTF-8}")
     private String charset;
 
 

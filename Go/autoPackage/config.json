@@ -1,0 +1,9 @@
+{
+  "type": "powerShell",
+  "command_sep": "|",
+  "workspace": ["H:", "code", "java"],
+  "out_path": ["E:","prodPackage"],
+  "modules": ["hclp-zcbf-web","hclp-ativiti", "hclp-ztpj", "test-knife4j"],
+  "commands": ["mvn clean package"],
+  "jar_path": ["target"]
+}

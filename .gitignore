@@ -6,8 +6,9 @@
 
 # Java
 .project
-.gitignore
-parent/
+
+#gradle
+.gradle/
 
 # Maven
 .mvn/

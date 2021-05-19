@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+    url: jdbc:derby:powerdetail;create=true
+    type: com.zaxxer.hikari.HikariDataSource
+#    schema: classpath:sql/schema/*.sql
+#    data: classpath:sql/data/*.sql
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+
+server:
+  port: 17171

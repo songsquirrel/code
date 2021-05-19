@@ -1,0 +1,2 @@
+insert into t_power_detail_consume values('1', 2019, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100);
+insert into t_power_detail_consume values('1', 2020, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100);

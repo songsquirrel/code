@@ -1,9 +1,11 @@
 package com.song.tools.code.generator;
 
+import com.song.tools.code.generator.service.CodeGeneratorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.context.ConfigurableApplicationContext;
+
 
 
 /**
@@ -14,8 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class CodeGeneratorApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext run = SpringApplication.run(CodeGeneratorApplication.class, args);
-        run.getBean("");
+        SpringApplication.run(CodeGeneratorApplication.class, args);
     }
 
 }

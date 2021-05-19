@@ -1,0 +1,20 @@
+server:
+  port: 17881
+
+spring:
+  application:
+    name: rocketmq-producer
+  cloud:
+    stream:
+      rocketmq:
+        binder:
+          name-server: 172.31.103.218:9876
+        bindings:
+          # 自定义生产者组
+          output:
+            producer:
+              group: demo-output-group
+      bindings:
+        # 与rocketmq的自定义生产者组关联
+        output:
+          destination: VM-0-4-centos   # 发送的topic

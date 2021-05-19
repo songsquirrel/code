@@ -6,10 +6,10 @@
 <#-- Greet the user with his/her name -->
 <h1>Welcome ${user}!</h1>
 <p>We have these animals:
-<ul>
-    <#list animals as animal>
-        <li>${animal.name} for ${animal.price} Euros</li>
-    </#list>
-</ul>
+<#--<ul>-->
+<#--    <#list animals as animal>-->
+<#--        <li>${animal.name} for ${animal.price} Euros</li>-->
+<#--    </#list>-->
+<#--</ul>-->
 </body>
 </html>
